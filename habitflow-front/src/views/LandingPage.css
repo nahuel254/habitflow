@@ -1,0 +1,396 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.landing-content-area {
+     padding: 0;
+    width: 100%;
+}
+
+.app-header {
+    background-color: #c9f0ec; 
+    padding: 160px 0; 
+    border-radius: 0; 
+    margin: 0;
+    
+}
+
+
+.header-content-wrapper {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 40px; 
+}
+
+
+.app-header h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #343a40;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.app-header h1:last-child {
+    font-size: 40px;
+    color: #1e815c; 
+    margin-bottom: 25px;
+}
+
+/* botones del Header */
+.header-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.start-journey-button, .learn-more-button {
+    font-family: "Arimo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 9999px;
+    border-width: 2px !important;
+    border-color: #4bd4b2 !important;
+    color: #4bd4b2 !important;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.start-journey-button {
+    background-color: #4bd4b2; 
+    color: white !important;
+    border: none;
+}
+
+.start-journey-button:hover {
+    background-color: #44bea0;
+}
+
+.learn-more-button {
+    background-color: transparent;
+    border: 1px solid #44bea0;
+}
+
+.learn-more-button:hover {
+    background-color: #e6f6f3;
+}
+
+.footer-landing p {
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    background-color: black;
+    padding: 20px 0;
+    margin: 0;
+}
+
+
+/* ============ NAV BAR ============ */
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: #c9f0ec;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+/* LOGO */
+.logo-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: black !important;
+    text-decoration: none;
+    font-family: "Changa One", sans-serif !important; 
+    font-optical-sizing: auto !important;
+    font-weight: 400 !important; 
+    font-style: normal !important;
+}
+
+
+/* ============ LINKS CENTRADOS ============ */
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+/* links */
+.nav-link {
+    color: #000000;
+    font-weight: 500;
+    text-decoration: none;
+    padding-bottom: 0.4rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Hover */
+.nav-link:hover {
+    color: #44bea0;
+}
+
+/* Línea verde debajo */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #44bea0;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ============ LOGIN A LA DERECHA ============ */
+.navbar-right {
+    margin-left: auto; 
+}
+
+/* Botón redondeado LOGIN */
+.login-btn-rounded {
+    background-color: #44bea0 ;
+    color: white;
+    font-weight: 600;
+    padding: 0.45rem 1rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.login-btn-rounded:hover {
+    background-color: #41b195;
+}
+
+.login-btn-rounded:active {
+    transform: scale(0.96);
+}
+
+/* ============ SECTION============ */
+
+.how-it-works {
+  padding: 0.2rem 2rem 1rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+  color: black;
+}
+
+.how-it-works-wrapper {
+  max-width: 900px;
+  margin: 0px auto;
+  padding: 50px 0 100px 0; 
+}
+
+.how-it-works h2 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #13161a;
+  line-height: 1.1;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  margin-bottom: 1rem;
+}
+
+.how-it-works p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.step {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.icon {
+  width: 100px;   
+  height: 90px;  
+  color:#10b981; 
+}
+
+.step h3 {
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  color: #666;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+    .header-content-wrapper {
+        padding: 0 30px;
+    }
+
+    .app-header h1 {
+        font-size: 42px;
+    }
+
+    .app-header h1:last-child {
+        font-size: 34px;
+    }
+
+    .how-it-works h2 {
+        font-size: 40px;
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+
+    .navbar-center {
+        gap: 1rem;
+    }
+
+    .app-header {
+        padding: 120px 0;
+    }
+
+    .app-header h1 {
+        font-size: 38px;
+    }
+
+    .app-header h1:last-child {
+        font-size: 30px;
+    }
+
+    .header-actions {
+        gap: 12px;
+    }
+
+    .start-journey-button,
+    .learn-more-button {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    
+    .navbar {
+        padding: 1rem;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .navbar-center {
+        display: none; 
+    }
+
+    
+    .login-btn-rounded {
+        padding: 0.4rem 0.9rem;
+        font-size: 14px;
+    }
+
+    /* Header */
+    .app-header {
+        padding: 100px 0;
+        text-align: center;
+    }
+
+    .header-content-wrapper {
+        padding: 0 20px;
+    }
+
+    .app-header h1 {
+        font-size: 34px;
+    }
+
+    .app-header h1:last-child {
+        font-size: 28px;
+    }
+
+    .header-actions {
+        justify-content: center;
+    }
+
+    /* Section how-it-works */
+    .how-it-works h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* Header */
+    .app-header {
+        padding: 90px 0;
+    }
+
+    .app-header h1 {
+        font-size: 30px;
+    }
+
+    .app-header h1:last-child {
+        font-size: 24px;
+    }
+
+    .header-actions {
+        flex-direction: column; 
+        gap: 10px;
+        align-items: center;
+    }
+
+    .start-journey-button,
+    .learn-more-button {
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+    }
+
+    /* Section how-it-works */
+    .how-it-works-wrapper {
+        padding: 40px 0 70px 0;
+    }
+
+    .how-it-works h2 {
+        font-size: 30px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr; 
+        gap: 1.5rem;
+    }
+
+    .step {
+        padding: 1.5rem;
+    }
+
+    .icon {
+        width: 70px;
+        height: 60px;
+    }
+}

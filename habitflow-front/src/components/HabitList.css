@@ -1,0 +1,124 @@
+.habit-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 14px;
+  
+}
+
+/* ============================ */
+/* TARJETA DE HÁBITO            */
+/* ============================ */
+.habit-item {
+  position: relative;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 19px;
+}
+
+
+/* ============================ */
+/* ICONO IZQUIERDA              */
+/* ============================ */
+
+.habit-icon-circle {
+  width: 70px;
+  height: 70px;
+  min-width: 65px;
+  background: #e2dede;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.habit-icon {
+  width: 30px;
+  height: 30px;
+  color: #333;
+}
+
+/* ============================ */
+/* CONTENIDO                    */
+/* ============================ */
+.habit-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  position: relative;
+}
+
+.habit-item h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+}
+
+.habit-item p {
+  margin: 0;
+  color: #000000;
+  font-size: 14px;
+}
+
+/* ============================ */
+/* BOTÓN ELIMINAR               */
+/* ============================ */
+.delete-btn {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: transparent;
+  border: none;
+  color: #888;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+
+/* ============================ */
+/* CHECK BUTTON                 */
+/* ============================ */
+.habit-check-btn {
+  position: absolute;
+  right: 0;
+  top: 56%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #b6b6b6;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.habit-check-btn svg {
+  width: 18px;
+  height: 18px;
+  color: white;
+}
+
+/* completado */
+.habit-check-btn.checked {
+  background: #4bd4b2;
+  border-color: #4bd4b2;
+  transform: translateY(-50%) scale(1.18);
+}
+
+.habit-check-btn.checked svg {
+  color: white;
+}
+
+.habit-check-btn:hover {
+  border-color: #777;
+}

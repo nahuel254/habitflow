@@ -1,0 +1,90 @@
+.register-container {
+    padding: 40px;
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.register-container h2 {
+    color: #1e815c;
+    margin-bottom: 25px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.register-form input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.register-form button {
+    padding: 12px;
+    background-color: #1e815c; 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.register-form button:hover:not(:disabled) {
+    background-color: #145e43;
+}
+
+.register-form button:disabled {
+    background-color: #90ee90;
+    cursor: not-allowed;
+}
+
+.switch-auth {
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.switch-auth p {
+    margin: 0 0 10px 0;
+    color: #6c757d;
+}
+
+.switch-button {
+    background: none;
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.switch-button:hover {
+    background-color: #e6f6ff;
+}
+
+/* Mensajes de feedback */
+.auth-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.auth-message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.auth-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}

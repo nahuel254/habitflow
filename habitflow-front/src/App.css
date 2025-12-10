@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden
+}
+
+.app-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #cbd8d5; 
+}
+
+/* Contenido (Logueado) */
+.main-content-area {
+    padding: 0 40px 40px 40px; 
+    max-width: 1200px;
+    margin: 0 40px 0 40px; 
+    width: 100%;
+    flex-grow: 1; 
+}
+
+/* ================================================= */
+/* 🚀 LAYOUT DE DOS COLUMNAS */
+/* ================================================= */
+
+/* alinea la lista y el formulario */
+.two-column-layout {
+    padding-top: 20px; 
+    display: flex;
+    gap: 30px; 
+    align-items: flex-start; 
+
+}
+
+/* Columna Izquierda: Lista de Hábitos */
+.left-column {
+    flex: 3; 
+    min-width: 300px;
+}
+
+/* Columna Derecha: Formulario de Creación */
+.right-column {
+    flex: 2; 
+    width: 100%; 
+}
+
+
+/* --- Responsividad --- */
+
+@media (max-width: 1200px) {
+    .main-content-area {
+        padding: 15px 20px;   
+        max-width: 900px;     
+    }
+    
+    .two-column-layout {
+        gap: 20px;            
+    }
+
+    .left-column, 
+    .right-column {
+        max-width: 420px;     
+    }
+
+    .right-column {
+
+        transform: translateX(-20px); 
+    }
+    
+    .left-column {
+        transform: translateX(-10px); 
+    }
+}
+
+@media (max-width: 800px) {
+
+    .main-content-area {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 10px 15px 10px;   
+        
+    }
+
+    .two-column-layout {
+        flex-direction: column;
+        gap: 15px;                
+        align-items: center;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        max-width: 400px;         
+        margin: 0 auto;
+    }
+
+    /* Cartas de hábitos más compactas */
+    .habit-card {
+        padding: 10px;            
+        font-size: 14px;          
+        transform: scale(0.95);   
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .main-content-area {
+        padding: 0 8px;           
+    }
+
+    .two-column-layout {
+        gap: 12px;                
+    }
+
+    .left-column,
+    .right-column {
+        max-width: 320px;         
+    }
+
+    .habit-card {
+        padding: 8px 10px;        
+        font-size: 13px;          
+        transform: scale(0.9);    
+    }
+}
+
