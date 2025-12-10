@@ -19,7 +19,7 @@ function HabitList({ token }) {
             setLoading(true);
             setError(null);
             try {
-                const response = await fetch(`${API_BASE_URL}/habits`, {
+                const response = await fetch(`${API_BASE_URL}/api/habits`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
 

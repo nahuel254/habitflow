@@ -16,7 +16,7 @@ const HabitForm = ({ token, onHabitCreated }) => {
     setMessage('');
 
     try {
-      const response = await fetch(`${API_BASE_URL}/habits`, {
+      const response = await fetch(`${API_BASE_URL}/api/habits`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
