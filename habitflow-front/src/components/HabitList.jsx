@@ -65,7 +65,7 @@ function HabitList({ token }) {
     // ============================
     const handleToggle = async (habitId) => {
         try {
-            const response = await fetch(`${API_BASE_URL}/habits/${habitId}/toggle`, {
+            const response = await fetch(`${API_BASE_URL}/api/habits/${habitId}/toggle`, {
                 method: "PUT",
                 headers: { Authorization: `Bearer ${token}` },
             });
@@ -92,7 +92,7 @@ function HabitList({ token }) {
         if (!window.confirm("¿Seguro que deseas eliminar este hábito?")) return;
 
         try {
-            const response = await fetch(`${API_BASE_URL}/habits/${habitId}`, {
+            const response = await fetch(`${API_BASE_URL}/api/habits/${habitId}`, {
                 method: "DELETE",
                 headers: { Authorization: `Bearer ${token}` },
             });

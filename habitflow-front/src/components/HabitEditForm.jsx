@@ -17,7 +17,7 @@ const HabitEditForm = ({ habit, token, onHabitUpdated, onCancelEdit }) => {
     setMessage('');
 
     try {
-      const response = await fetch(`${API_BASE_URL}/habits/${habit._id}`, {
+      const response = await fetch(`${API_BASE_URL}/api/habits/${habit._id}`, {
         method: 'PUT', // 
         headers: {
           'Content-Type': 'application/json',
